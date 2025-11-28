@@ -1,0 +1,106 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <!-- Desactivamos los Compile por defecto para evitar duplicados con el ItemGroup personalizado -->
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Modulos de dominio y logica -->
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema1.cs" />
+    <Compile Include="PersistenciaBinaria.cs" />
+    <Compile Include="DecisionNode.cs" />
+    <Compile Include="Doctor.cs" />
+    <Compile Include="Hospital.cs" />
+    <Compile Include="Paciente.cs" />
+    <Compile Include="PersonalHospitalario.cs" />
+    <Compile Include="RegistroMedico.cs" />
+    <Compile Include="Usuario.cs" />
+
+    <!-- Formularios WinForms -->
+    <Compile Include="FormPrincipal.cs" />
+    <Compile Include="FormPrincipal.Designer.cs" />
+
+    <Compile Include="FormLoginPaciente.cs" />
+    <Compile Include="FormLoginPaciente.Designer.cs" />
+    <Compile Include="FormLoginPersonal.cs" />
+    <Compile Include="FormLoginPersonal.Designer.cs" />
+
+    <Compile Include="FormMenuPaciente.cs" />
+    <Compile Include="FormMenuPaciente.Designer.cs" />
+    <Compile Include="FormMenuMedico.cs" />
+    <Compile Include="FormMenuMedico.Designer.cs" />
+    <Compile Include="FormMenuAdministrador.cs" />
+    <Compile Include="FormMenuAdministrador.Designer.cs" />
+
+    <Compile Include="FormSeleccionarHospital.cs" />
+    <Compile Include="FormSeleccionarHospital.Designer.cs" />
+    <Compile Include="FormIngresarSintomas.cs" />
+    <Compile Include="FormIngresarSintomas.Designer.cs" />
+    <Compile Include="FormDiagnostico.cs" />
+    <Compile Include="FormDiagnostico.Designer.cs" />
+
+    <Compile Include="FormHistorialPaciente.cs" />
+    <Compile Include="FormHistorialPaciente.Designer.cs" />
+    <Compile Include="FormMisPacientes.cs" />
+    <Compile Include="FormMisPacientes.Designer.cs" />
+
+    <Compile Include="FormAtenderPaciente.cs" />
+    <Compile Include="FormAtenderPaciente.Designer.cs" />
+    <Compile Include="FormValidarDiagnosticos.cs" />
+    <Compile Include="FormValidarDiagnosticos.Designer.cs" />
+    <Compile Include="FormVerUsuarios.cs" />
+    <Compile Include="FormVerUsuarios.Designer.cs" />
+
+    <Compile Include="FormGestionPersonal.cs" />
+    <Compile Include="FormGestionPersonal.Designer.cs" />
+    <Compile Include="FormRegistrarPersonalAdmin.cs" />
+    <Compile Include="FormRegistrarPersonalAdmin.Designer.cs" />
+    <Compile Include="FormRegistroPersonal.cs" />
+    <Compile Include="FormRegistroPersonal.Designer.cs" />
+
+    <Compile Include="FormActualizarDatos.cs" />
+    <Compile Include="FormActualizarDatos.Designer.cs" />
+    <Compile Include="FormCambiarPassword.cs" />
+    <Compile Include="FormCambiarPassword.Designer.cs" />
+    <Compile Include="FormCambiarPasswordPersonal.cs" />
+    <Compile Include="FormCambiarPasswordPersonal.Designer.cs" />
+
+    <Compile Include="FormCompararHospitales.cs" />
+    <Compile Include="FormCompararHospitales.Designer.cs" />
+
+    <Compile Include="FormTrasladoPaciente.cs" />
+    <Compile Include="FormInfoPacientesDoctores.cs" />
+    <Compile Include="FormVerImagenesSeguro.cs" />
+    <Compile Include="FormVerDetallePaciente.cs" />
+    <Compile Include="FormEditarAdminData.cs" />
+    <Compile Include="FormVerPacientesHospital.cs" />
+    <Compile Include="FormEditarPersonal.cs" />
+    <Compile Include="FormEditarPersonal.Designer.cs" />
+    <Compile Include="FormDialogoValidacion.cs" />
+    <Compile Include="FormListaColaPacientes.cs" />
+    <Compile Include="FormListaColaPacientes.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualBasic" Version="10.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
